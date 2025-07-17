@@ -12,6 +12,9 @@ Key features include:
 - **RESTful API** for integration or automation.
 - **LAN-friendly**: Easily accessible by any device on the same network.
 
+![ScriptEditor_Page](images/ScriptEditor.png)
+![History Page](images/History.png)
+
 ---
 
 ## Setup Instructions
