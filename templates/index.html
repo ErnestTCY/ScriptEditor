@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script Editor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column align-items-center py-4">
+  <div class="container" style="max-width: 700px;">
+    <div class="bg-white rounded shadow p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 text-primary">Script Editor</h1>
+        <div class="d-flex gap-2">
+          <a href="/" class="btn btn-outline-primary">New Script</a>
+          <a href="history.html" class="btn btn-success">View History</a>
+        </div>
+      </div>
+      <form id="scriptForm" class="mb-3">
+        <div class="mb-3">
+          <input type="text" id="title" placeholder="Title" required class="form-control" />
+        </div>
+        <div class="mb-3">
+          <textarea id="content" placeholder="Enter your script here..." rows="6" required class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+          <input type="file" id="files" name="files" multiple accept="image/*,.txt,.py,.pdf,.doc,.docx,.c,.sh,.pt" class="form-control" />
+        </div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary flex-fill">Save Script</button>
+          <button type="button" id="clearAll" class="btn btn-secondary flex-fill">Clear All</button>
+        </div>
+      </form>
+    </div>
+    <div class="bg-white rounded shadow p-4">
+      <h2 class="h4 text-primary mb-3">Script Titles</h2>
+      <div id="scripts" class="d-grid gap-2"></div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html> 

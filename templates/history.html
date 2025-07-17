@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Script History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+</head>
+<body class="bg-light min-vh-100 d-flex flex-column align-items-center py-4">
+  <div class="container" style="max-width: 700px;">
+    <div class="bg-white rounded shadow p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="h3 text-primary">Script History</h1>
+        <a href="/" class="btn btn-outline-primary">Back to Editor</a>
+      </div>
+      <div class="mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search by title, description, or file name...">
+      </div>
+      <div id="scripts" class="d-grid gap-3"></div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='history.js') }}"></script>
+</body>
+</html> 
